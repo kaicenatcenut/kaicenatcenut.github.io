@@ -103,6 +103,10 @@ app.post('/midtrans-notification', async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.redirect('/kaicenat.html');
+});
+
 app.listen(port, () => {
     console.log(`Server Kaistore listening at http://localhost:${port}`);
     console.log(`Pastikan URL Notifikasi di Midtrans Dashboard (Sandbox) adalah: ${process.env.APP_BASE_URL}/midtrans-notification`);
